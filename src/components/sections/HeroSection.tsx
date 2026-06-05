@@ -9,6 +9,15 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl mx-auto">
+        {/* Logo */}
+        <div className="flex justify-center mb-6">
+          <img
+            src="https://cdn.poehali.dev/projects/d6353ee6-8e07-43af-9849-8e913c0fe453/bucket/223847d5-0829-4892-998f-12d4322169d1.png"
+            alt="ProjectFeral Logo"
+            className="h-32 w-32 object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+          />
+        </div>
+
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 mb-8">
           <Crosshair className="w-4 h-4 text-zinc-400" />
