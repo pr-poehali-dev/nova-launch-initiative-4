@@ -1,16 +1,44 @@
 import { motion } from "framer-motion"
-import { Zap, BarChart3, Layers, ArrowRight, Shield } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Cloud, Home, Car, Backpack, Swords, AlertTriangle } from "lucide-react"
 
-const modLogos = [
-  { name: "Mod 1" },
-  { name: "Mod 2" },
-  { name: "Mod 3" },
-  { name: "Mod 4" },
-  { name: "Mod 5" },
-  { name: "Mod 6" },
-  { name: "Mod 7" },
-  { name: "Mod 8" },
+const features = [
+  {
+    icon: Cloud,
+    title: "Атмосфера и мир",
+    description:
+      "Знойный август сменяется холодными ливнями. По-настоящему тёмные, пугающие ночи заставляют ценить каждый источник света. Воду можно добывать прямо из дождя, автобег избавляет от рутины, а интерактивная карта и компас надёжно помогут в навигации.",
+  },
+  {
+    icon: Home,
+    title: "Базы и строительство",
+    description:
+      "Мощная система строительства с магнитным монтажом: трёхэтажные частоколы, ворота с колючей проволокой, охраняемая территория. Строй-рюкзак и переноска заполненных бочек делают процесс эффективным. На стены можно вешать костюмные полотна с эксклюзивными изображениями от команды Project Feral.",
+  },
+  {
+    icon: Car,
+    title: "Транспорт",
+    description:
+      "Сортировка лута в багажнике прямо из машины при открытом багажнике. Глушение двигателя на ходу для тактических манёвров, функция переворота в сложных ситуациях. Дополнительный багажник на крыше для перевозки ящиков и бочек.",
+  },
+  {
+    icon: Backpack,
+    title: "Экипировка",
+    description:
+      "Большой рюкзак увеличивает вместимость, тактический ремень позволяет убирать оружие из поля зрения. Множество прицелов, включая установку натовской оптики на советское оружие через переходную планку, модовые глушители и тактические чехлы.",
+  },
+  {
+    icon: Swords,
+    title: "Динамические события",
+    description:
+      "Ивенты конвойного типа появляются в случайных местах карты в разных обличиях. Хеликраши с увеличенным лутом создают жаркие точки столкновений. Оповещения приходят как в игре, так и в Discord-сообществе сервера.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Правила обязательны",
+    description:
+      "Внимание! Прочитайте правила сервера перед игрой. Незнание правил не освобождает от ответственности. Честная игра и уважение к игрокам — основа Project Feral.",
+    warning: true,
+  },
 ]
 
 export function FeaturesSection() {
@@ -23,262 +51,57 @@ export function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-6"
         >
-          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">О сервере</p>
+          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">О проекте</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-100 mb-4">
-            Всё для выживания
+            Тщательно сбалансированный мир
           </h2>
-          <p className="text-zinc-500 max-w-xl mx-auto text-balance">
-            Уникальные моды, честная игра и активная администрация — всё чтобы ты провёл незабываемые часы в Чернарусе.
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-          {/* Card 1 - Analytics (wider - 3 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-3"
-          >
-            <Card className="group h-full overflow-hidden border-zinc-800/50 bg-zinc-900/50 hover:border-zinc-700/50 transition-all duration-300 rounded-2xl">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <motion.div
-                    className="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center"
-                    whileHover={{ rotate: [0, -10, 10, 0] }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <BarChart3 className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
-                  </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Статистика сервера</p>
-                </div>
-                <p className="text-zinc-500 text-sm mb-5">
-                  Онлайн, активность и события — всё в реальном времени.
-                </p>
-                <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 overflow-hidden">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <motion.div
-                        className="flex items-center gap-1.5"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5 }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-zinc-400" />
-                        <span className="text-xs text-zinc-500">Игроки</span>
-                      </motion.div>
-                      <motion.div
-                        className="flex items-center gap-1.5"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.6 }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-zinc-600" />
-                        <span className="text-xs text-zinc-500">Активность</span>
-                      </motion.div>
-                    </div>
-                  </div>
-                  {/* Animated metrics row */}
-                  <div className="grid grid-cols-3 gap-3 mb-4">
-                    {[
-                      { label: "Онлайн", value: "64/80", change: "+5" },
-                      { label: "Часов сыграно", value: "12 тыс", change: "+8%" },
-                      { label: "Рейтинг", value: "4.9★", change: "топ" },
-                    ].map((metric, i) => (
-                      <motion.div
-                        key={metric.label}
-                        className="bg-zinc-900/50 rounded-lg p-2.5"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 + i * 0.1 }}
-                      >
-                        <p className="text-zinc-500 text-xs mb-1">{metric.label}</p>
-                        <div className="flex items-baseline gap-1.5">
-                          <span className="text-zinc-100 font-semibold text-sm">{metric.value}</span>
-                          <motion.span
-                            className="text-zinc-400 text-xs"
-                            animate={{ opacity: [0.5, 1, 0.5] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          >
-                            {metric.change}
-                          </motion.span>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                  {/* Animated bar chart */}
-                  <div className="flex items-end gap-1.5 h-16">
-                    {[35, 55, 40, 75, 50, 85, 60, 70, 45, 90, 65, 80].map((h, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex-1 bg-gradient-to-t from-zinc-700 to-zinc-500 rounded-sm origin-bottom"
-                        initial={{ scaleY: 0 }}
-                        whileInView={{ scaleY: h / 100 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.5 + i * 0.04, ease: "easeOut" }}
-                        whileHover={{ scaleY: 1, transition: { duration: 0.2 } }}
-                      />
-                    ))}
-                  </div>
-                  {/* Animated line underneath */}
-                  <motion.div
-                    className="h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent mt-3"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                  />
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+        {/* Main description */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-zinc-400 text-center max-w-2xl mx-auto mb-14 leading-relaxed text-balance"
+        >
+          Project Feral — это игровой мир для глубокого погружения и сосредоточённого геймплея. Здесь убрано всё, что отвлекает от сути, и добавлено всё, что делает выживание по-настоящему интересным.
+        </motion.p>
 
-          {/* Card 2 - Performance (narrower - 2 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:col-span-2"
-          >
-            <Card className="group h-full overflow-hidden border-zinc-800/50 bg-zinc-900/50 hover:border-zinc-700/50 transition-all duration-300 rounded-2xl">
-              <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex items-center gap-3 mb-3">
-                  <motion.div
-                    className="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <Zap className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
-                  </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Стабильный сервер</p>
-                </div>
-                <p className="text-zinc-500 text-sm mb-5">Мощное железо, никаких лагов и вылетов.</p>
-                <div className="mt-auto">
-                  <div className="flex items-baseline gap-2 mb-3">
-                    <motion.span
-                      className="text-4xl font-display font-bold text-zinc-100"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                    >
-                      99.9%
-                    </motion.span>
-                    <span className="text-zinc-500 text-sm">аптайм</span>
-                  </div>
-                  <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-gradient-to-r from-zinc-500 to-zinc-300 rounded-full"
-                      initial={{ width: "0%" }}
-                      whileInView={{ width: "99.9%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* Card 3 - Keyboard shortcuts (narrower - 2 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="md:col-span-2"
-          >
-            <Card className="group h-full overflow-hidden border-zinc-800/50 bg-zinc-900/50 hover:border-zinc-700/50 transition-all duration-300 rounded-2xl">
-              <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex items-center gap-3 mb-3">
-                  <motion.div
-                    className="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center"
-                    whileHover={{ y: -2 }}
-                  >
-                    <Shield className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
-                  </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Честная игра</p>
-                </div>
-                <p className="text-zinc-500 text-sm mb-5">Античит и живая администрация 24/7.</p>
-                <div className="flex justify-center gap-2 mt-auto">
-                  {["Anti", "Cheat"].map((key, i) => (
-                    <motion.div
-                      key={key}
-                      className="flex items-center justify-center px-4 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/50 shadow-lg"
-                      initial={{ y: 0 }}
-                      animate={{ y: [0, -4, 0] }}
-                      transition={{
-                        duration: 1.5,
-                        delay: i * 0.15,
-                        repeat: Infinity,
-                        repeatDelay: 2,
-                      }}
-                      whileHover={{ scale: 1.1, y: -4 }}
-                    >
-                      <span className="text-zinc-300 font-mono text-sm">{key}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* Card 4 - Integrations (wider - 3 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="md:col-span-3"
-          >
-            <Card className="group h-full overflow-hidden border-zinc-800/50 bg-zinc-900/50 hover:border-zinc-700/50 transition-all duration-300 rounded-2xl">
-              <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex items-center gap-3 mb-3">
-                  <motion.div
-                    className="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center"
-                    whileHover={{ rotate: 180 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <Layers className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
-                  </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Уникальные моды</p>
-                </div>
-                <p className="text-zinc-500 text-sm mb-5">Кастомное оружие, транспорт, базы и эвенты — не как везде.</p>
-                <div className="grid grid-cols-8 gap-2 mt-auto">
-                  {modLogos.map((logo, i) => (
-                    <motion.div
-                      key={logo.name}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.3 + i * 0.05 }}
-                      whileHover={{ scale: 1.15, y: -2 }}
-                      className="aspect-square rounded-lg border border-zinc-800 bg-zinc-800/50 flex items-center justify-center cursor-pointer"
-                    >
-                      <div className="w-5 h-5 rounded bg-zinc-700" />
-                    </motion.div>
-                  ))}
-                </div>
-                <motion.button
-                  whileHover={{ x: 6 }}
-                  className="mt-4 flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
-                >
-                  Все моды <ArrowRight className="w-4 h-4" />
-                </motion.button>
-              </CardContent>
-            </Card>
-          </motion.div>
+        {/* Features grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {features.map((feature, i) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className={`group p-6 rounded-2xl border transition-all duration-300 ${
+                feature.warning
+                  ? "border-zinc-700/50 bg-zinc-900/80 hover:border-zinc-600/50"
+                  : "border-zinc-800/50 bg-zinc-900/50 hover:border-zinc-700/50"
+              }`}
+            >
+              <div
+                className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${
+                  feature.warning ? "bg-zinc-800" : "bg-zinc-800"
+                }`}
+              >
+                <feature.icon
+                  className={`w-5 h-5 transition-colors ${
+                    feature.warning
+                      ? "text-zinc-400 group-hover:text-zinc-200"
+                      : "text-zinc-400 group-hover:text-zinc-200"
+                  }`}
+                />
+              </div>
+              <h3 className="font-heading font-semibold text-zinc-100 mb-2">{feature.title}</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">{feature.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
