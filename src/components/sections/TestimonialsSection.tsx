@@ -78,7 +78,7 @@ export function TestimonialsSection() {
           <div className="border border-zinc-800 py-1.5 px-4 rounded-full text-sm text-zinc-400">Отзывы</div>
 
           <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-100 mt-6 text-center tracking-tight">
-            Что говорят выжившие
+            Что говорят игроки
           </h2>
           <p className="text-center mt-4 text-zinc-500 text-lg text-balance">
             Реальные отзывы игроков нашего сервера.
