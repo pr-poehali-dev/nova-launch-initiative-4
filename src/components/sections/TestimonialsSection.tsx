@@ -62,7 +62,6 @@ const firstColumn = testimonials.slice(0, 3)
 const secondColumn = testimonials.slice(3, 6)
 const thirdColumn = testimonials.slice(6, 9)
 
-const logos = ["Chernarusplus", "Namalsk", "Livonia", "DayZMod", "SurvivorHub", "ZombieZone"]
 
 export function TestimonialsSection() {
   return (
@@ -91,34 +90,7 @@ export function TestimonialsSection() {
           <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
         </div>
 
-        <div className="mt-16 pt-16 border-t border-zinc-800/50">
-          <p className="text-center text-sm text-zinc-500 mb-8">Популярные карты на нашем сервере</p>
-          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-            <motion.div
-              className="flex gap-12 md:gap-16"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                x: {
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
-            >
-              {/* Duplicate logos for seamless loop */}
-              {[...logos, ...logos].map((logo, index) => (
-                <span
-                  key={`${logo}-${index}`}
-                  className="text-xl font-semibold text-zinc-700 whitespace-nowrap flex-shrink-0"
-                >
-                  {logo}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        </div>
+
       </div>
     </section>
   )
