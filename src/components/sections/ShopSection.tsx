@@ -1,21 +1,26 @@
 import { motion } from "framer-motion"
-import { ArrowRight, ShoppingBag, Shield, Zap, Star } from "lucide-react"
+import { ArrowRight, ShoppingBag, DoorOpen, Shirt, Car, Hammer } from "lucide-react"
 
 const shopCategories = [
   {
-    icon: Shield,
-    title: "Привилегии",
-    description: "VIP и Premium-статусы с уникальными бонусами, скинами и приоритетным доступом на серверы.",
+    icon: DoorOpen,
+    title: "Приоритетный вход",
+    description: "Гарантированный слот на сервере даже при полном онлайне — заходи без очереди в любое время.",
   },
   {
-    icon: Zap,
-    title: "Наборы выживания",
-    description: "Стартовые киты с оружием, снаряжением и ресурсами — начни игру с преимуществом.",
+    icon: Shirt,
+    title: "Сэты одежды",
+    description: "Готовые комплекты со стартовым лутом для выживания — одевайся и сразу иди в бой.",
   },
   {
-    icon: Star,
-    title: "Уникальные предметы",
-    description: "Эксклюзивные скины, кастомное оружие и декор для базы, которых нет у других игроков.",
+    icon: Car,
+    title: "Транспорт",
+    description: "Автомобили и технику для быстрого перемещения по карте, рейдов и перевозки груза.",
+  },
+  {
+    icon: Hammer,
+    title: "Выживание и база",
+    description: "Всё необходимое для строительства крепости и выживания: материалы, инструменты, ресурсы.",
   },
 ]
 
@@ -40,7 +45,7 @@ export function ShopSection() {
         </motion.div>
 
         {/* Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {shopCategories.map((cat, i) => (
             <motion.div
               key={cat.title}
@@ -48,7 +53,7 @@ export function ShopSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-5 rounded-2xl border border-zinc-800/50 bg-zinc-900/50 flex gap-4"
+              className="p-5 rounded-2xl border border-zinc-800/50 bg-zinc-900/50 hover:border-zinc-700/50 transition-all duration-300 flex flex-col gap-3"
             >
               <div className="w-10 h-10 shrink-0 rounded-xl bg-zinc-800 flex items-center justify-center">
                 <cat.icon className="w-5 h-5 text-zinc-400" />
