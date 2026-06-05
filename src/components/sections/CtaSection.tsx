@@ -10,14 +10,14 @@ export function CtaSection() {
           Присоединяйся к 500+ выжившим прямо сейчас. Сервер онлайн, слоты есть — твоё место тебя ждёт.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#pricing">
-            <LiquidCtaButton>Получить привилегии</LiquidCtaButton>
+          <a href="https://projectferal.ru/" target="_blank" rel="noopener noreferrer">
+            <LiquidCtaButton>Перейти в магазин</LiquidCtaButton>
           </a>
           <a
-            href="#"
+            href="#servers"
             className="group flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
           >
-            <span>Наш Discord</span>
+            <span>Выбрать сервер</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>

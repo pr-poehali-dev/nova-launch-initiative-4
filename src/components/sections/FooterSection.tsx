@@ -5,6 +5,7 @@ const footerLinks = {
     { label: "О сервере", href: "#features" },
     { label: "Привилегии", href: "#pricing" },
     { label: "Отзывы", href: "#testimonials" },
+    { label: "Магазин", href: "https://projectferal.ru/" },
     { label: "Правила", href: "#" },
   ],
   company: [
@@ -41,7 +42,12 @@ export function FooterSection() {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
+                  <a
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+                  >
                     {link.label}
                   </a>
                 </li>
