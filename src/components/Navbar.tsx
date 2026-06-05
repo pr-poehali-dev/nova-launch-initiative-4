@@ -2,7 +2,6 @@ const navLinks = [
   { href: "#servers", label: "Серверы" },
   { href: "#features", label: "О проекте" },
   { href: "#testimonials", label: "Отзывы" },
-  { href: "#pricing", label: "Привилегии" },
   { href: "#shop", label: "Магазин" },
 ]
 

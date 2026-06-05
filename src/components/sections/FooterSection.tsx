@@ -3,7 +3,6 @@ import { Github, Twitter, Linkedin } from "lucide-react"
 const footerLinks = {
   product: [
     { label: "О сервере", href: "#features" },
-    { label: "Привилегии", href: "#pricing" },
     { label: "Отзывы", href: "#testimonials" },
     { label: "Магазин", href: "https://projectferal.ru/" },
     { label: "Правила", href: "#" },
