@@ -3,58 +3,58 @@ import { TestimonialsColumn } from "@/components/ui/testimonials-column"
 
 const testimonials = [
   {
-    text: "Velocite сократил наш пайплайн деплоя с 4 часов до 12 минут. Автоматизация кардинально изменила наш CI/CD процесс.",
+    text: "Лучший DayZ-сервер, на котором я играл. Моды топовые, лагов нет, админы всегда на связи. Сижу уже полгода.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    name: "Анна Смирнова",
-    role: "CTO в TechFlow Solutions",
+    name: "Анна К.",
+    role: "Выживший, 600+ часов",
   },
   {
-    text: "Мы изучили 15 платформ, прежде чем выбрать Velocite. ROI стал очевиден уже в первый месяц использования.",
+    text: "Наконец-то нашёл сервер без читеров. Античит работает, банят быстро. Атмосфера как в первый раз.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    name: "Максим Волков",
-    role: "VP Engineering в Quantum Dynamics",
+    name: "Максим В.",
+    role: "Рейдер, 1200+ часов",
   },
   {
-    text: "Наша команда выпустила в 3 раза больше фич за квартал. Инструменты совместной работы сделали удаленку бесшовной.",
+    text: "PvP-зоны, ивенты каждую неделю, кастомное оружие — скучать некогда. Привёл сюда всю тиму.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    name: "Елена Родригес",
-    role: "Head of Product в Alpine Ventures",
+    name: "Елена Р.",
+    role: "Лидер клана, 900+ часов",
   },
   {
-    text: "Онбординг прошел невероятно гладко. Вся команда разработки стала продуктивной уже на первой неделе.",
+    text: "Привилегия VIP окупилась с первой же сессии. Кит со старта и приоритетный слот — просто мастхэв.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    name: "Дмитрий Парк",
-    role: "IT-директор в Stellar Analytics",
+    name: "Дмитрий П.",
+    role: "VIP-игрок, 400+ часов",
   },
   {
-    text: "Поддержка клиентов на высоте. Помогли мигрировать всю инфраструктуру с нулевым даунтаймом.",
+    text: "Сервер онлайн круглосуточно, вылетов не было ни разу за три месяца. Это редкость в DayZ-комьюнити.",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    name: "Анна Ковальски",
-    role: "Операционный директор в Nova Industries",
+    name: "Алина М.",
+    role: "Мирный игрок, 300+ часов",
   },
   {
-    text: "API-интеграции сэкономили сотни часов разработки. Все работает из коробки.",
+    text: "Кастомные локации и транспорт — на других серверах такого просто нет. Здесь DayZ совсем другой.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    name: "Алексей Вилсон",
-    role: "CEO в Meridian Tech",
+    name: "Алексей В.",
+    role: "Исследователь, 750+ часов",
   },
   {
-    text: "Velocite изменил наш подход к релизам. Откаты, занимавшие часы, теперь происходят за секунды.",
+    text: "Быстро разобрался с правилами, сообщество дружелюбное. Новичкам тут комфортно — помогут и научат.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
-    name: "Лиза Томпсон",
-    role: "DevOps Lead в Cascade Systems",
+    name: "Лиза Т.",
+    role: "Новичок, 80+ часов",
   },
   {
-    text: "Аналитический дашборд дает инсайты, которых у нас раньше не было. Data-driven решения стали нормой.",
+    text: "Ивенты каждые выходные, всегда что-то происходит. За победу дают реальные призы — мотивирует.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    name: "Михаил Чен",
-    role: "Product Manager в Vertex Labs",
+    name: "Михаил Ч.",
+    role: "Ивент-победитель, 500+ часов",
   },
   {
-    text: "Частота деплоев выросла в 5 раз без дополнительных затрат на инфраструктуру. Впечатляющая платформа.",
+    text: "Взял Premium и не пожалел. Свой скин, выделенный слот, доступ к закрытым ивентам — стоит каждой копейки.",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    name: "Рахиль Ким",
-    role: "Engineering Manager в Prism Digital",
+    name: "Рахиль К.",
+    role: "Premium-игрок, 1000+ часов",
   },
 ]
 
@@ -62,7 +62,7 @@ const firstColumn = testimonials.slice(0, 3)
 const secondColumn = testimonials.slice(3, 6)
 const thirdColumn = testimonials.slice(6, 9)
 
-const logos = ["TechFlow", "Quantum Dynamics", "Alpine Ventures", "Stellar Analytics", "Nova Industries", "Meridian Tech"]
+const logos = ["Chernarusplus", "Namalsk", "Livonia", "DayZMod", "SurvivorHub", "ZombieZone"]
 
 export function TestimonialsSection() {
   return (
@@ -78,10 +78,10 @@ export function TestimonialsSection() {
           <div className="border border-zinc-800 py-1.5 px-4 rounded-full text-sm text-zinc-400">Отзывы</div>
 
           <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-100 mt-6 text-center tracking-tight">
-            Что говорят пользователи
+            Что говорят выжившие
           </h2>
           <p className="text-center mt-4 text-zinc-500 text-lg text-balance">
-            Узнайте мнение наших клиентов о платформе.
+            Реальные отзывы игроков нашего сервера.
           </p>
         </motion.div>
 
@@ -92,7 +92,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="mt-16 pt-16 border-t border-zinc-800/50">
-          <p className="text-center text-sm text-zinc-500 mb-8">Нам доверяют лидеры индустрии</p>
+          <p className="text-center text-sm text-zinc-500 mb-8">Популярные карты на нашем сервере</p>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div
               className="flex gap-12 md:gap-16"
