@@ -17,27 +17,27 @@ export function HeroSection() {
 
         {/* Headline */}
         <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6">
-          <span className="text-zinc-100 block">Выживи любой ценой.</span>
+          <span className="text-zinc-100 block">ProjectFeral.</span>
           <span className="bg-gradient-to-r from-zinc-500 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">
-            Найди своих.
+            Выживи любой ценой.
           </span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
-          Хардкорный DayZ-сервер с уникальными модами, активным сообществом и честной игрой. Присоединяйся — и почувствуй настоящий постапокалипсис.
+          Сеть DayZ-серверов: Cherno, Namalsk и Deathmatch. Уникальные моды, честная игра, активное сообщество — выбирай свой режим.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#pricing">
-            <LiquidCtaButton>Получить привилегии</LiquidCtaButton>
+          <a href="#servers">
+            <LiquidCtaButton>Выбрать сервер</LiquidCtaButton>
           </a>
           <a
             href="#features"
             className="group flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
           >
-            <span>Об сервере</span>
+            <span>О проекте</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>
